@@ -16,16 +16,16 @@
 
     ![gitlab-create-group.png](./images/gitlab-create-group.png)
 
-3. Now lets create the git repository that we are going to use to store out Notebooks but also for GITOps purposes. The `mlops-exercise` will serve as a mono-repo holding both our tooling configuration and the application definitions and some other stuff. In the real world, you may want to separate these into different repos! Anyways, hit `New project` button on the right hand side
+3. Now lets create the git repository that we are going to use to store out Notebooks but also for GITOps purposes. The `mlops-instructions` will serve as a mono-repo holding both our tooling configuration and the application definitions and some other stuff. In the real world, you may want to separate these into different repos! Anyways, hit `New project` button on the right hand side
     ![gitlab-new-project](images/gitlab-new-project.png)
 
-4. On the new view, use `mlops-exercise` as Project Name, select **Internal** for Visibility level, then hit Create project. Make sure the project is in the group you created previously and not the username's.
+4. On the new view, use `mlops-instructions` as Project Name, select **Internal** for Visibility level, then hit Create project. Make sure the project is in the group you created previously and not the username's.
     ![gitlab-new-project](images/gitlab-new-project-2.png)
 
 5. Now let's go back to Jupyter Notebook. Clone the original repository and push it into your new GitLab project. Click the Git icon from the left menu, then select `Clone a Repository`. Copy the GitHub link and clone the repository.
 
     ```bash
-    https://github.com/rht-labs/mlops-exercise.git
+    https://github.com/rhoai-mlops/mlops-instructions.git
     ```
 
     ![notebook-clone-repo.png](./images/notebook-clone-repo.png)
@@ -82,8 +82,8 @@
 7. Let's push our code to the GitLab server.
 
     ```bash
-    cd mlops-exercise
-    git remote set-url origin https://<GIT_SERVER>/<TEAM_NAME>/mlops-exercise.git
+    cd mlops-instructions
+    git remote set-url origin https://<GIT_SERVER>/<TEAM_NAME>/mlops-instructions.git
     ```
 
     Use the `GITLAB_PAT` from above when you are prompted for the password (this will be cached)
