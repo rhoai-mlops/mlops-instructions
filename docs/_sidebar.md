@@ -4,4 +4,9 @@
   * [✨ Git Setup](1-when-the-music-starts/2-git-setup.md)
   * [🎶 Object Storage](1-when-the-music-starts/3-minio-object-storage.md)
 * [2. In the Rhythm of Data](2-in-the-rhythm-of-data/README.md)
-
+  * [🪴 Data Science Inner Loop](2-in-the-rhythm-of-data/1-inner-data-science-loop.md)
+  * [🪄 Training Pipeline](2-in-the-rhythm-of-data/2-training-pipeline.md)
+* [3. From Studio to Stage](3-from-studio-to-stage/README.md)
+  * [🦄 GitOps](3-from-studio-to-stage/1-gitops.md)
+  * [🔥 Application of Applications](3-from-studio-to-stage/2-app-of-apps.md)
+  * [🏄‍♂️ Model Deployment](3-from-studio-to-stage/3-model-deployment.md)
