@@ -1,8 +1,8 @@
 # Exercise 2 - From Studio to Stage
-> Introduction to MLOps
+> Introduction to MLOps: a set of practices that automate and simplify machine learning workflows and deployments. 
 
 ## 👨‍🍳 Exercise Intro
-In this exercise we will create our MLOps environment where the continuous training pipelines will
+In this exercise we will create our MLOps environment where the continuous training pipeline and the supporting toolings will be running.
 
 ## 🖼️ Big Picture
 

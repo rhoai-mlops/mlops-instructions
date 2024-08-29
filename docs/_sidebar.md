@@ -8,4 +8,5 @@
   * [🪄 Training Pipeline](2-in-the-rhythm-of-data/2-training-pipeline.md)
 * [3. From Studio to Stage](3-from-studio-to-stage/README.md)
   * [🦄 GitOps](3-from-studio-to-stage/1-gitops.md)
-  * [🔥 Application of Applications](./3-from-studio-to-stage/2-app-of-apps.md)
+  * [🔥 Application of Applications](3-from-studio-to-stage/2-app-of-apps.md)
+  * [🏄‍♂️ Model Deployment](3-from-studio-to-stage/3-model-deployment.md)

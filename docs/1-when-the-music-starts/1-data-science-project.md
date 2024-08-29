@@ -19,7 +19,7 @@ This project will be the place where we create our Jupyter Notebooke environment
 
 3. Let's create a notebook. Click `Create a Workbench`. OpenShift AI UI is pretty intiutive, isn't it? :)
 
-   Select a name you want, could be something like `hitmusic-wb` 🍷
+   Select a name you want, could be something like `hitmusic-wb` 🎺
 
     For Notebook Image: 
 
