@@ -10,3 +10,4 @@
   * [🦄 GitOps](3-from-studio-to-stage/1-gitops.md)
   * [🔥 Application of Applications](3-from-studio-to-stage/2-app-of-apps.md)
   * [🏄‍♂️ Model Deployment](3-from-studio-to-stage/3-model-deployment.md)
+  * [🤖 Continuous Training Pipeline](3-from-studio-to-stage/4-continuous-training-pipelines.md)
