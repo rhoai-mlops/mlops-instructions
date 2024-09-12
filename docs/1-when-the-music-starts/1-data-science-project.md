@@ -1,20 +1,12 @@
 ## Data Science Project
 
-1. Login to OpenShift AI. The link and the credentials will be provided by your instructor.
+1. Login to OpenShift AI. The link and the credentials will be provided by your instructor. You'll see there is already a `Data Science Projects` created for you. 
 
 ![openshiftai.png](./images/openshiftai.png)
 
-2. Go to `Data Science Projects` and click `Create data science project` to create your own experimentation environment.
-
-![datascienceproject.png](./images/datascienceproject.png)
-
-Put the name you choose as the project name and hit `Create`.
+2. Click on the project name. This project will be the place where we create our Jupyter Notebook environment, train our model and deploy our model.
 
 ![datascienceproject-2.png](./images/datascienceproject-2.png)
-
-This project will be the place where we create our Jupyter Notebooke environment, train our model and deploy our model.
-
-![datascienceproject-3.png](./images/datascienceproject-3.png)
 
 
 3. Let's create a notebook. Click `Create a Workbench`. OpenShift AI UI is pretty intiutive, isn't it? :)
@@ -30,7 +22,10 @@ This project will be the place where we create our Jupyter Notebooke environment
     - Deployment size: `Small`
     - Cluster storage: `20 GB`. 
     
-    Let's keep the `Data connections` part empty for now. We'll get back to this later.
+    - Select `Data connections` and choose the second option `Use existing data connection`
+    
+      From the dropdown menu, select `models`
+       
 
     And finally, hit `Create`.
 
@@ -54,4 +49,4 @@ This project will be the place where we create our Jupyter Notebooke environment
 
     ![jupyter-notebook-ui.png](./images/jupyter-notebook-ui.png)
 
-    But before, there are two things we need to get done; setup our own Git repository and some S3 storage for experimentation 🫡
+    But first, let's setup our own Git repository and see what type of S3 storage environment we have for experimentation 🫡

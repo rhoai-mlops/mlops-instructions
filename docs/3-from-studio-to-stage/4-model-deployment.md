@@ -25,16 +25,16 @@ We deployed our `jukebox` model in experiment environment manually, but for the 
 2. Let's add `jukebox` model definition under `model-deployments/test/values.yaml` and `model-deployments/stage/values.yaml` files as follow. This will take a model deployment helm-chart from a generic helm chart repository and apply the additional configuration to it from the `values` section. 
 
     ```yaml
-    # Jukebox
-    jukebox:
-      name: jukebox
-      enabled: true
-      source: https://github.com/rhoai-mlops/mlops.git
-      source_ref: main
-      source_path: charts/model-deployment
-      values:
-        model_path: models/jukebox
-        model_version: model.onnx
+      # Jukebox
+      jukebox:
+        name: jukebox
+        enabled: true
+        source: https://github.com/rhoai-mlops/mlops.git
+        source_ref: main
+        source_path: charts/model-deployment
+        values:
+            model_path: models/jukebox
+            model_version: model.onnx
     ```
 3. Let's get this deployed of course - it's not real unless its in git!
 
@@ -48,10 +48,10 @@ We deployed our `jukebox` model in experiment environment manually, but for the 
 4. With the values enabled, and the first application listed in the test environment - let's tell ArgoCD to start picking up changes to these environments. To do this, simply update the helm chart we installed at the beginning of the first exercise:
 
     ```bash#test
-    cd /projects/tech-exercise
+    cd /opt/app-root/src/mlops-gitops
     helm upgrade --install argoapps --namespace <TEAM_NAME>-mlops .
     ```
 
 5. You should see the two Jukebox application, one for `test` and one for `stage` deployed in Argo CD. 
 
-6. As you see the InferenceService is having a hard time to start, and it is because there is no model saved in the Minio bucket yet. This time we are not going to do it manually, but we are going to let ✨ _pipeline_ ✨ do it for us.
+6. As you see the `InferenceService` is having a hard time to start, and it is because there is no model saved in the Minio bucket yet. This time we are not going to do it manually, but we are going to let ✨ _pipeline_ ✨ do it for us.

@@ -6,7 +6,7 @@
 
 ## 🖼️ Big Picture
 
-TODO: add diagram
+![big-picture](./images/big-picture.jpg)
 
 ## 🔮 Learning Outcomes
 
@@ -18,3 +18,4 @@ TODO: add diagram
 * OpenShift AI 2.10+
 * Jupyter Notebook
 * Minio
+* Model Registry
