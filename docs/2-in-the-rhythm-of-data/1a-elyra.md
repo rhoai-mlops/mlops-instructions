@@ -37,3 +37,5 @@ Then select that Notebook and drop it into `4-train_save_model.pipeline` file. C
 6. You'll see everything green when the pipeline runs successfully :)
 
 ![elyra-6.png](./images/elyra-6.png)
+
+As you experienced, Elyra is pretty straightforward and easy to set up! It is greatto start with, however when we need more complex workflows, it's better to transition to a tool like KfP that has more advanced features. 
