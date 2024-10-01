@@ -18,16 +18,21 @@ Now managed by their grandchildren, the label recognizes the potential of AI to 
 
 
 
-So they came to us..OpenMusicAI! 💪
+So they decided to form a team! 💪
 <iframe src="https://giphy.com/embed/uXWRiPpOs6tMsJa6xp" width="480" height="401" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/Verohallinto-verohallinto-epic-tax-guy-uXWRiPpOs6tMsJa6xp"></a></p>
 
 
 
 
-#### 🎶 OpenMusicAI 🎶
+#### 🎶 JukeboxAI 🎶
 Our mission is to create a world where music thrives through data-driven insights and open collaboration. 
 
-Together with KRAP Records, we embark on a journey to develop an ML model that could analyze vast amounts of music data, identify trends, and predict market preferences.
+We embark on a journey to develop an ML model that could analyze vast amounts of music data, identify trends, and predict market preferences.
+
+
+
+
+We'll do it by integrating MLOps practices early on! We'll streamline model development, automate deployment pipelines, and establish a monitoring infrastructure, which will help us efficiently manage the complexity of analyzing vast amounts of music data and evolving market preferences.
 
 
 
@@ -36,11 +41,7 @@ Together with KRAP Records, we embark on a journey to develop an ML model that c
 
 
 
-###
 <!-- .slide: data-background-size="contain" data-background-image="images/krap-records/spoiler-alert.png", class="white-style" -->
-
-
-### Add summary of the journey with visualizations
 
 
 
