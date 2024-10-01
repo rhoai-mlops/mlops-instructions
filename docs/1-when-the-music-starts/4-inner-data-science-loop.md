@@ -24,4 +24,26 @@ Now make your way to the Notebook and when you have a model saved in the `models
 
 ### Model Serving
 
+Now that we have our model artifacts saved in the bucket, we can deploy it in our data science project and serve it from a container. The beauty of OpenShift AI, and the underlying KServe technology, we don't have to worry about the containerization of the model. All we have to do is select the right runtime for our model and point where to model is. Let's give it a try:
 
+1. Go tp your data science project > Models > Select Single-Model Serving Platform by clicking Deploy Model.
+
+![single-model-serving.png](./images/single-model-serving.png)
+
+2. Fill out the form by the following information:
+
+- Model name: `jukebox`
+- Serving runtime: `OpenVino Model Server`
+- Model framework: `onnx -1`
+- Model location: Select from existing data connection and pick `models`
+- Path: `models/jukebox`
+
+..and hit `Deploy`
+
+![jukebox.png](./images/jukebox.png)
+
+3. It will take some time (cause in the background, OpenShift AI pulls the image, downloads your model, copies to the right folder and starts the runtime), but eventually you'll get an endpoint that enabled you to interract with the model!
+
+![jukebox-deployed.png](./images/jukebox-deployed.png)
+
+4. Copy that URL and go back to your Workbench. Open up the `jukebox/3-dev_datascience/3-request_model.ipynb` notebook and follow the instructions to make some sweet predictions ✨

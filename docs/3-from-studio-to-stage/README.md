@@ -15,7 +15,6 @@ In this exercise we will create our MLOps environment where the continuous train
 - [ ] Understand traceability
 
 ## 🔨 Tools used in this exercise
-* OpenShift 4.15+
-* OpenShift AI 2.10+
 * OpenShift Pipelines
-* Kubeflow Registry
+* OpenShift GitOps
+* Kubeflow Registry 

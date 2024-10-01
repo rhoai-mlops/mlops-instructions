@@ -5,7 +5,7 @@
   * [🎶 Object Storage](1-when-the-music-starts/3-minio-object-storage.md)
   * [🪴 Data Science Inner Loop](1-when-the-music-starts/4-inner-data-science-loop.md)
 * [2. In the Rhythm of Data](2-in-the-rhythm-of-data/README.md)
-  * [🪄 Experiment Pipeline](2-in-the-rhythm-of-data/1-experiment-pipeline.md)
+  * [🪄 Training Pipeline](2-in-the-rhythm-of-data/1-training-pipeline.md)
     * [☘️ Elyra](2-in-the-rhythm-of-data/1a-elyra.md)
     * [🤸 KFP](2-in-the-rhythm-of-data/1b-kfp.md)
 * [3. From Studio to Stage](3-from-studio-to-stage/README.md)
