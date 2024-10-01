@@ -37,7 +37,7 @@
 
     ![create-a-workbench-4.png](./images/create-a-workbench-4.png)
 
-5. Clone the Git repository that has model source code. Click the Git icon from the left menu, then select `Clone a Repository`. Copy the    GitHub link and clone the repository.
+5. Clone the Git repository that has model source code. Click the Git icon from the top of the left menu and , copy the GitHub link to clone the repository.
 
     ```bash
     https://github.com/rhoai-mlops/jukebox.git
