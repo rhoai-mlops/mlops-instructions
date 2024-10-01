@@ -15,13 +15,13 @@ Object storage provides a flexible and scalable way to store large amounts of un
     helm install minio mlops/minio
     </code></pre></div>
 
-4. You can access Minio via UI and check that there are already two buckets created for you. Run the below command on the terminal of Jupyter Notebook.
+4. You can access Minio via UI and check that there are already two buckets created for you. Below is the link to your Minio instance:
 
-```bash
-echo https://$(oc get route minio-ui --template='{{ .spec.host }}' -n <TEAM_NAME>)
-```
+    ```yaml
+    https://minio-ui-<TEAM_NAME>.<CLUSTER_DOMAIN>
+    ```
 
-Click to URL and use `minio` as username, `minio123` as password.
+Go to URL and use `minio` as username, `minio123` as password.
 
 ![minio-ui.png](./images/minio-ui.png)
 
