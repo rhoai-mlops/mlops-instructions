@@ -9,10 +9,11 @@ Object storage provides a flexible and scalable way to store large amounts of un
 
 1. For simplicity, a Minio instance is already installed in your dev environment for you. For the curious ones, we leveraged a `Helm chart` and ran below steps to deploy it.
 
-```bash
-helm repo add mlops https://rhoai-mlops.github.io/mlops/
-helm install minio mlops/minio
-```
+    <div class="highlight" style="background: #f7f7f7">
+    <pre><code class="language-yaml">
+    helm repo add mlops https://rhoai-mlops.github.io/mlops/
+    helm install minio mlops/minio
+    </code></pre></div>
 
 4. You can access Minio via UI and check that there are already two buckets created for you. Run the below command on the terminal of Jupyter Notebook.
 
@@ -32,4 +33,5 @@ Click to URL and use `minio` as username, `minio123` as password.
 
 You selected `models` data connection while creating the workbench. Because we will interract with this bucket during our experimentation phase.
 
-One more tool to get familiar with before we dive into our dataset! 💪
+
+ 🪄🪄🪄 Now that we got the essential tools to start our journey, let's dive into our dataset! 🪄🪄🪄

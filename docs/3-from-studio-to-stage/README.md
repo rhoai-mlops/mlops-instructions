@@ -6,7 +6,7 @@ In this exercise we will create our MLOps environment where the continuous train
 
 ## 🖼️ Big Picture
 
-TODO: add diagram
+![big-picture-pipeline.jpg](./images/big-picture-pipeline.jpg)
 
 ## 🔮 Learning Outcomes
 
