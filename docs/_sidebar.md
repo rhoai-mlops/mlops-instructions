@@ -11,5 +11,6 @@
 * [3. From Studio to Stage](3-from-studio-to-stage/README.md)
   * [🦄 GitOps](3-from-studio-to-stage/1-gitops.md)
   * [🔥 Application of Applications](3-from-studio-to-stage/2-app-of-apps.md)
-  * [🤖 Continuous Training Pipeline](3-from-studio-to-stage/3-continuous-training-pipelines.md)
-  * [🏄‍♂️ Model Deployment](3-from-studio-to-stage/4-model-deployment.md)
+  * [🧤 Extend App of Apps](3-from-studio-to-stage/3-extend-app-of-apps.md)
+  * [🤖 Continuous Training Pipeline](3-from-studio-to-stage/4-continuous-training-pipelines.md)
+  * [🏄‍♂️ Model Deployment](3-from-studio-to-stage/5-model-deployment.md)
