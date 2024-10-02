@@ -10,7 +10,7 @@ This inner loop is essential in data science as well because it allows for conti
 - Model Evaluation: Assessing the model's performance using metrics like accuracy, precision, recall, and F1-score.
 - Model Refinement: Iterating on the previous steps to improve the model's accuracy and generalization capabilities.
 
-Let's get some experience on these stages by following the steps in notebooks we cloned to our workbench. It all starts with getting familiar with the dataset at hand, so we'll start with `jukebox/2-data_exploration/1-data_exploration.ipynb` notebook.
+Let's get some experience on these stages by following the steps in notebooks we cloned to our workbench. It all starts with getting familiar with the dataset at hand, so we'll start with `jukebox/1-data_exploration/1-data_exploration.ipynb` notebook.
 
 
 ![jupyter_notebook.png](./images/jupyter_notebook.png)
@@ -46,4 +46,4 @@ Now that we have our model artifacts saved in the bucket, we can deploy it in ou
 
 ![jukebox-deployed.png](./images/jukebox-deployed.png)
 
-4. Copy that URL and go back to your Workbench. Open up the `jukebox/3-dev_datascience/3-request_model.ipynb` notebook and follow the instructions to make some sweet predictions ✨
+4. Copy that URL and go back to your Workbench. Open up the `jukebox/2-dev_datascience/3-request_model.ipynb` notebook and follow the instructions to make some sweet predictions ✨

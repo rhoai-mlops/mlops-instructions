@@ -23,11 +23,9 @@ Since we are going to deal with some yaml files, let's switch to a different typ
 
     For Notebook Image: 
 
-    - Image selection: `code-server`
+    - Image selection: `ml500-code-server`
 
-    - Version selection: `2024.1`
-
-    - Deployment size: `Tiny`
+    - Deployment size: `Small`
 
     Leave the rest default and hit `Create`.
   
@@ -55,7 +53,6 @@ Since we are going to deal with some yaml files, let's switch to a different typ
     operator: []
     namespaces:
       - <TEAM_NAME>-mlops
-    teamInstancesAreClusterScoped: false
     argocd_cr:
       initialRepositories: |
         - url: https://<GIT_SERVER>/<TEAM_NAME>/mlops-gitops.git
@@ -143,7 +140,7 @@ Since we are going to deal with some yaml files, let's switch to a different typ
   echo https://$(oc get route/minio-ui -n <TEAM_NAME>-mlops --template='{{.spec.host}}')
   ```
 
-🪄🪄 Magic! You’ve now deployed Argo CD and got it to manually deploy an application for you. Next up, we’ll make Argo CD do some REAL GitOps 🪄🪄
+🪄🪄 Magic! You’ve now deployed Argo CD and got it to manually deploy an application for you. Next up, we’ll make Argo CD do some more GitOps 🪄🪄
 
 
 

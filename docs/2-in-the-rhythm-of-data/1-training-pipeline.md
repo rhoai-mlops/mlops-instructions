@@ -6,6 +6,6 @@ Training pipelines are a foundational aspect of machine learning that enhance th
 
 We have two powerful tools to build pipelines; Elyra and Kubeflow Pipelines (KfP).
 
-Elyra provides a user-friendly interface for building and managing pipelines directly within Jupyter notebooks, enabling rapid prototyping and experimentation. On the other hand, Kubeflow Pipelines offers a robust framework for deploying and scaling machine learning workflows in production, leveraging Kubernetes for orchestration, resource management, and seamless integration with existing cloud environments. Together, they empower data scientists to efficiently transition from development to production, ensuring effective model management and deployment.
+Elyra provides a user-friendly interface for building and managing pipelines directly within Jupyter notebooks, enabling rapid prototyping and experimentation. On the other hand, Kubeflow Pipelines offers a robust framework for deploying and scaling machine learning pipelines in production, leveraging Kubernetes for orchestration, resource management, and seamless integration with existing cloud environments. Together, they empower data scientists to efficiently transition from development to production, ensuring effective model management and deployment.
 
 Let's get familiar with both more!
