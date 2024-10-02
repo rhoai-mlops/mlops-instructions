@@ -41,6 +41,46 @@ Since we are going to deal with some yaml files, let's switch to a different typ
     helm repo add redhat-cop https://redhat-cop.github.io/helm-charts
     ```
 
+
+3. We are using the Red Hat GitOps Operator which was deployed as part of the cluster setup. Normally this step would be done as part of the Operator Install so its a bit more complicated than we would like. Because we did not know your team names ahead of time 👻 we will need to update an environment variable on the Operator Subscription. This tells the Operator its OK to deploy a cluster scoped ArgoCD instance into your <TEAM_NAME>-mlops project. Run this shell script:
+
+    <p class="tip">
+    🐌 THIS IS NOT GITOPS - Until we work out a better way to automate this. 🐎 If you see "...." in your terminal after you copy this shell script, do not worry. Hit return and it will run as designed.
+    </p>
+
+    ```bash
+      run()
+      {
+        NS=$(oc get subscriptions.operators.coreos.com/openshift-gitops-operator -n openshift-gitops-operator \
+          -o jsonpath='{.spec.config.env[?(@.name=="ARGOCD_CLUSTER_CONFIG_NAMESPACES")].value}')
+        opp=
+        if [ -z $NS ]; then
+          NS="<TEAM_NAME>-mlops"
+          opp=add
+        elif [[ "$NS" =~ .*"<TEAM_NAME>-mlops".* ]]; then
+          echo "<TEAM_NAME>-mlops already added."
+          return
+        else
+          NS="<TEAM_NAME>-mlops,${NS}"
+          opp=replace
+        fi
+
+        oc -n openshift-gitops-operator patch subscriptions.operators.coreos.com/openshift-gitops-operator --type=json -p \
+        '[{"op":"'$opp'","path":"/spec/config/env/1","value":{"name": "ARGOCD_CLUSTER_CONFIG_NAMESPACES", "value":"'${NS}'"}}]'
+        echo "EnvVar set to: $(oc get subscriptions.operators.coreos.com/openshift-gitops-operator -n openshift-gitops-operator \ 
+          -o jsonpath='{.spec.config.env[?(@.name=="ARGOCD_CLUSTER_CONFIG_NAMESPACES")].value}')"
+      }
+      run
+
+    ```
+
+    The output should look something like this with other teams appended as well:
+    <div class="highlight" style="background: #f7f7f7">
+    <pre><code class="language-bash">
+      subscriptions.operators.coreos.com/openshift-gitops-operator patched
+      EnvVar set to: <TEAM_NAME>-mlops,anotherteam-mlops
+    </code></pre></div>
+
 3. Let’s perform a basic install of Argo CD. Using most of the defaults defined on the chart is sufficient for our use case.
 
   We’re are also going to configure Argo CD to be allowed pull from our git repository using a secret 🔐.
@@ -56,6 +96,15 @@ Since we are going to deal with some yaml files, let's switch to a different typ
     argocd_cr:
       initialRepositories: |
         - url: https://<GIT_SERVER>/<TEAM_NAME>/mlops-gitops.git
+          type: git
+          passwordSecret:
+            key: password
+            name: git-auth
+          usernameSecret:
+            key: username
+            name: git-auth
+          insecure: true
+        - url: https://<GIT_SERVER>/<TEAM_NAME>/mlops-helmcharts.git
           type: git
           passwordSecret:
             key: password
@@ -114,10 +163,10 @@ Since we are going to deal with some yaml files, let's switch to a different typ
       * Project: `default`
       * Sync Policy: `Automatic`
    * On the "SOURCE" box
-      * Repository URL: `https://rhoai-mlops.github.io/mlops/`
+      * Repository URL: `https://rhoai-mlops.github.io/mlops-helmcharts/`
       * Select `Helm` from the right drop down menu
       * Chart: `minio`
-      * Version: `0.0.6`
+      * Version: `0.0.7`
    * On the "DESTINATION" box
       * Cluster URL: `https://kubernetes.default.svc`
       * Namespace: `<TEAM_NAME>-mlops`
