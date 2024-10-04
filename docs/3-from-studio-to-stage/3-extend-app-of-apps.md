@@ -24,7 +24,7 @@ These two were already installed in your dev environment. Now we need to bring t
         enabled: true
         source: https://rhoai-mlops.github.io/mlops-helmcharts/
         chart_name: dspa
-        source_ref: "0.0.1"
+        source_ref: "0.0.3"
     ```
 
 3. And now, let's push the changes to our GitOps repository.
